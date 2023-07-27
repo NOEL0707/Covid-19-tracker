@@ -32,3 +32,6 @@ This command will remove the spawned containers.
 
 ### `docker compose down -v`
 This command will remove the spawned containers as well as the data/volumes associated with it.
+
+### `Generating API Keys`
+Once all the containers are running. go to [http://localhost:8086](http://localhost:8086) to access influxDB and generate custom API key which gives read/write access to COVID bucket. after generating place the given api key inside the docker compose file at variable INFLUXDB_TOKEN.re run this application using docker compose up. 

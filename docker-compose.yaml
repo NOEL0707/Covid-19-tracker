@@ -18,20 +18,15 @@ services:
     build: ./backend
     image: covidtracker-backend-compose
     environment:
-      - INFLUXDB_TOKEN=mytoken
+      - INFLUXDB_TOKEN=2g3UODxp-hNTePRDsDwSj_j1ZWI3JbvdMIxVRO9BQDu34O4Ctkqg7XsxWPcKAXlGSAaZWj1Kc-lpi94RwIIJAw==
       - PORT=4444
-      - DATABASE_URL=http://localhost:8086
+      - DATABASE_URL=http://influxdb:8086
       - INFLUXDB_ORG=IUDX
       - INFLUXDB_BUCKET=COVID
     depends_on:
       - influxdb
     ports:
       - 4444:4444
-    volumes: 
-      - ./backend-files:/usr/src/app/files
-      - ./backend-files/generatedOffers:/usr/src/app/files/generatedOffers
-      - ./backend-files/roundUpdates:/usr/src/app/files/roundUpdates
-
     stdin_open: true
     tty: true
     restart: on-failure
@@ -39,7 +34,7 @@ services:
     build: ./frontend
     image: covidtracker-frontend-compose
     ports:
-      - 3000:8004
+      - 3000:80
     stdin_open: true
 
 volumes: 

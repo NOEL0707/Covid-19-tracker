@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
   res.send('Home page of COVID-19 Application site!');
 })
 
-app.listen(port, () => {
+const server=app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
+server.timeout = 100000;
