@@ -18,12 +18,12 @@ Make sure You have Git installed on your system.If you don't have git you can do
 ### `docker compose up --build`
 Use this command if you want to recompile/rebuild the image.
 To run this command Make sure you are in the same directory in which `docker-compose.yaml` is present.
-This command will spawn the frontend container at localhost:3000,Backend container at localhost:4444 and a mysql database.
+This command will spawn the frontend container at localhost:3000,Backend container at localhost:4444 and a InfluxDB database.
 Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ### `docker compose up`
 To run this command Make sure you are in the same directory in which `docker-compose.yaml` is present.
-This command will spawn the frontend container at localhost:3000,Backend container at localhost:4444 and a mysql database.
+This command will spawn the frontend container at localhost:3000,Backend container at localhost:4444 and a InfluxDB database.
 
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
